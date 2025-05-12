@@ -38,20 +38,16 @@
             const num = parseFloat(document.getElementById("numero").value);
             const resultado = document.getElementById("resultado");
 
-            if (isNaN(num)) {
-                resultado.textContent = "Por favor, digite um número.";
-                return;
-            }
-
-            if (num <= 100) {
-                for (let i = 1; i <= 100; i++) {
-                    resultado.textContent += `${i} `;
-                }
-            }else {
+            if (num >= 0) {
                 for (let i = 1; i <= num; i++) {
                     resultado.textContent += `${i} `;
                 }
+            } else {
+                for (let i = 1; i <= 100; i++) {
+                    resultado.textContent += `${i} `;
+                }
             }
+            resultado.textContent += "Contagem concluída!";
         }
     </script>
 

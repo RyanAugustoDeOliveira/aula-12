@@ -38,7 +38,15 @@
             const num = parseFloat(document.getElementById("numero").value);
             const resultado = document.getElementById("resultado");
 
+            if (isNaN(num)) {
+                resultado.textContent = "Por favor, digite um número.";
+                return;
+            }
+
             
+            while (num !== 0) {
+                
+            }
         }
     </script>
 
