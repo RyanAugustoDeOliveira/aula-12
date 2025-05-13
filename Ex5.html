@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Somar números até o usuário digitar 0</title>
+    <title>Inverter uma string</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,7 +27,7 @@
 
 <body>
 
-    <h1>Somar números até o usuário digitar 0</h1>
+    <h1>Inverter uma string</h1>
     <input type="number" id="numero" placeholder="Digite um número" />
     <button onclick="verificar()">Verificar</button>
 
@@ -35,6 +35,8 @@
 
     <script>
         function verificar() {
+            var anos = [c, a, s, a];
+
             const num = parseFloat(document.getElementById("numero").value);
             const resultado = document.getElementById("resultado");
 
@@ -42,19 +44,12 @@
                 resultado.textContent = "Por favor, digite um número.";
                 return;
             }
-            let soma = 0;
-            let contagem = 0;
-            let i = 1;
-            while (i !== 0) {
-                if (num === 0) {
-                    break;
-                }
-                soma += num;
-                contagem++;
-                i = parseFloat(prompt("Digite outro número (ou 0 para sair):"));
+
+            resultado.textContent = "A string invertida é: ";
+            for (let i = num.length - 1; i >= 0; i--) {
+                resultado.textContent += num[i];
             }
 
-            resultado.textContent = `A soma é ${soma} e a contagem é ${contagem}.`;
         }
     </script>
 
